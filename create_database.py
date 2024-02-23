@@ -15,13 +15,13 @@ def main():
 
 
 def generate_data_store():
-    documents = load_documents()
+    documents = load_documents()                            
     chunks = split_text(documents)
     save_to_chroma(chunks)
 
 
 def load_documents():
-    loader = DirectoryLoader(DATA_PATH, glob="*.md")
+    loader = DirectoryLoader(DATA_PATH, glob="*.pdf")
     documents = loader.load()
     return documents
 
