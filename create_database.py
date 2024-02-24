@@ -8,6 +8,7 @@ import shutil
 
 CHROMA_PATH = "chroma"
 DATA_PATH = "data/books"
+OPENAI_API_KEY=os.environ['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']#HERE IS THE API KEY WE CAN CHANGE
 
 
 def main():
@@ -43,7 +44,7 @@ def split_text(documents: list[Document]):
     return chunks
 
 
-def save_to_chroma(chunks: list[Document]):
+def save_to_chroma(chunks: list[Document]): #chroma helps to store vector i embedding to make accuraccy precise  in the conde
     # Clear out the database first.
     if os.path.exists(CHROMA_PATH):
         shutil.rmtree(CHROMA_PATH)
