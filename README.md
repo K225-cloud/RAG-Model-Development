@@ -1,4 +1,4 @@
-# Langchain RAG Tutorial
+# Langchain RAG for Deeplogic.AI
 
 Install dependencies.
 
